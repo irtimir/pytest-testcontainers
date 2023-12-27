@@ -1,0 +1,79 @@
+[tool.poetry]
+name = "pytest-testcontainers"
+description = "Pytest plugin for testcontainers library"
+version = "0.1.0"
+license = "MIT"
+
+authors = []
+
+readme = "README.md"
+
+repository = "https://github.com/irtimir/pytest-testcontainers"
+
+keywords = []
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Framework :: Pytest",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Topic :: Software Development :: Testing",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+testcontainers = ">3"
+pytest = "*"
+
+[tool.poetry.group.test.dependencies]
+mypy = "^1.4"
+
+wemake-python-styleguide = "^0.17"
+flake8-pytest-style = "^1.6"
+nitpick = "^0.33"
+
+safety = "^2.3"
+
+pytest-cov = "^4.1"
+pytest-randomly = "^3.13"
+django = ">2"
+psycopg2-binary = ">2"
+pytest-django = ">4"
+tox = ">=4.7"
+cx-oracle = "^8.3.0"
+mysqlclient = "^2.2.0"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^7.0"
+sphinx-autodoc-typehints = "^1.23"
+m2r2 = "^0.3"
+tomli = "^2.0"
+doc8 = "^1.0"
+
+[tool.poetry.group.dev.dependencies]
+django = ">2"
+psycopg2-binary = ">2"
+pytest-django = ">4"
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.nitpick]
+style = "https://raw.githubusercontent.com/wemake-services/wemake-python-styleguide/master/styles/nitpick-style-wemake.toml"
+
+
+#[tool.pytest.ini_options]
+#DJANGO_SETTINGS_MODULE = "pytest_testcontainers_django_test.settings_postgres"
